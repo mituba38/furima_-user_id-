@@ -3,29 +3,25 @@
 
 | Column           | Type    | Options     |
 | ---------------- | ------- | ----------- |
-| first_name       | text    | null: false |
-| family_name      | text    | null: false |
-| kanafirst_name   | text    | null: false |
-| kanafirmily_name | text    | null: false |
-| email            | text    | null: false |
-| password         | text    | null: false |
-| nickname         | text    | null: false |
-| birth_y          | integer | null: false |
-| birth_m          | integer | null: false |
-| birth_d          | integer | null: false |
+| first_name       | string  | null: false |
+| family_name      | string  | null: false |
+| kanafirst_name   | string  | null: false |
+| kanafirmily_name | string  | null: false |
+| email            | string  | null: false |
+| password         | string  | null: false |
+| nickname         | string  | null: false |
+| birth            | date    | null: false |
 
 ### Association
 
 - has_many :sales
-- has_many :items, through: sales
 - has_many :items
-- has_many :addresses
 
 ## items テーブル
 
 | Column   | Type       | Options                        |
 | -------- | ---------- | ------------------------------ |
-| seller   | references | null: false, foreign_key: true |
+| user     | references | null: false, foreign_key: true |
 | name     | text       | null: false                    |
 | stock    | boolean    |                                |  
 | price    | integer    | null; false                    |   
@@ -38,9 +34,7 @@
 ### Association
 
 - has_many :sales
-- has_many :users, through: sales
 - belongs_to :user
-- belongs_to :adress
 
 ## sale テーブル
 
@@ -53,19 +47,18 @@
 
 - belongs_to :user
 - belongs_to :item
+- has_one :adress
 
 ## adresses テーブル
 
 | Column           | Type    | Options     |
 | ---------------- | ------- | ----------- |
-| postal_code      | integer | null: false |
-| prefectures      | text    | null: false |
-| city             | text    | null: false |
-| address          | text    | null: false |
-| building_name    | text    | null: false |
-| tel              | integer | null: false |
+| postal_code      | string  | null: false |
+| city             | string  | null: false |
+| address          | string  | null: false |
+| building_name    | string  | null: false |
+| tel              | string  | null: false |
 
 ### Association
 
-- belongs_to :user
-- has_many :items
+- belongs_to :sale

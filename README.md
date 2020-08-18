@@ -14,7 +14,7 @@
 
 ### Association
 
-- has_one :sales
+- has_many :sales
 - has_many :items
 
 ## items テーブル
@@ -22,7 +22,7 @@
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
 | user        | references | null: false, foreign_key: true |
-| explanation | string     | null: false                    |
+| explanation | text       | null: false                    |
 | name        | string     | null: false                    |  
 | price       | integer    | null: false                    |   
 | category    | integer    | null: false                    | 
@@ -33,7 +33,7 @@
 
 ### Association
 
-- has_many :sales
+- has_one :sales
 - belongs_to :user
 
 ## sales テーブル

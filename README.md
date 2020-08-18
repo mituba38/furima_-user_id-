@@ -19,17 +19,17 @@
 
 ## items テーブル
 
-| Column   | Type       | Options                        |
-| -------- | ---------- | ------------------------------ |
-| user     | references | null: false, foreign_key: true |
-| name     | text       | null: false                    |
-| stock    | boolean    |                                |  
-| price    | integer    | null; false                    |   
-| category | text       | null; false                    | 
-| status   | text       | null; false                    | 
-| charge   | boolean    |                                | 
-| area     | text       | null; false                    | 
-| date     | date       | null; false                    | 
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| user        | references | null: false, foreign_key: true |
+| explanation |
+| name        | text       | null: false                    |  
+| price       | integer    | null; false                    |   
+| category    | integer    | null; false                    | 
+| status      | integer    | null; false                    | 
+| charge      | integer    | null; false                    | 
+| area        | integer    | null; false                    | 
+| date        | integer    | null; false                    | 
 
 ### Association
 
@@ -54,9 +54,10 @@
 | Column           | Type    | Options     |
 | ---------------- | ------- | ----------- |
 | postal_code      | string  | null: false |
+| prefectures      | string  | null: false |
 | city             | string  | null: false |
 | address          | string  | null: false |
-| building_name    | string  | null: false |
+| building_name    | string  |             |
 | tel              | string  | null: false |
 
 ### Association

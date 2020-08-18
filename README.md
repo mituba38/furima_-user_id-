@@ -23,17 +23,17 @@
 
 ## items テーブル
 
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
 | seller   | references | null: false, foreign_key: true |
-| name   | text | null: false |
-| stock  | boolean |
-| price  |integer | null;false
-| category | text
-| status | text
-| charge | boolean
-| area | text
-| date | date
+| name     | text       | null: false                    |
+| stock    | boolean    |                                |  
+| price    | integer    | null; false                    |   
+| category | text       | null; false                    | 
+| status   | text       | null; false                    | 
+| charge   | boolean    |                                | 
+| area     | text       | null; false                    | 
+| date     | date       | null; false                    | 
 
 ### Association
 

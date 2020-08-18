@@ -22,14 +22,14 @@
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
 | user        | references | null: false, foreign_key: true |
-| explanation |
+| explanation | text       | null: false
 | name        | text       | null: false                    |  
-| price       | integer    | null; false                    |   
-| category    | integer    | null; false                    | 
-| status      | integer    | null; false                    | 
-| charge      | integer    | null; false                    | 
-| area        | integer    | null; false                    | 
-| date        | integer    | null; false                    | 
+| price       | integer    | null: false                    |   
+| category    | integer    | null: false                    | 
+| status      | integer    | null: false                    | 
+| charge      | integer    | null: false                    | 
+| area        | integer    | null: false                    | 
+| date        | integer    | null: false                    | 
 
 ### Association
 
@@ -51,14 +51,15 @@
 
 ## adresses テーブル
 
-| Column           | Type    | Options     |
-| ---------------- | ------- | ----------- |
-| postal_code      | string  | null: false |
-| prefectures      | string  | null: false |
-| city             | string  | null: false |
-| address          | string  | null: false |
-| building_name    | string  |             |
-| tel              | string  | null: false |
+| Column        | Type       | Options                       |
+| ------------- | ---------- | ----------------------------- |
+| sale          | references | null: false,foreign_key: true |
+| postal_code   | string     | null: false                   |
+| prefectures   | integer    | null: false                   |
+| city          | string     | null: false                   |
+| address       | string     | null: false                   |
+| building_name | string     |                               |
+| tel           | string     | null: false                   |
 
 ### Association
 

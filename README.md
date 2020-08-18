@@ -33,7 +33,7 @@
 
 ### Association
 
-- has_one :sales
+- has_one :sale
 - belongs_to :user
 
 ## sales テーブル
